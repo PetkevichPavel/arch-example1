@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorAccent">#FF03DAC5</color>
+
+    <color name="transparent">#00ffffff</color>
+
+    <color name="color_placeholder">#E6E6E6</color>
+    <color name="image_placeholder">#25000000</color>
+
+    <color name="color_overlay">#FF018786</color>
+    <color name="black_overlay">#CC161616</color>
+    <color name="color_state_overlay">#faefe9</color>
+
+    <color name="color_ui_light">#F2F2F2</color>
+
+    <color name="text_dark">#1D1D1B</color>
+    <color name="text_accent">#FF03DAC5</color>
+
+    <color name="listDivider">#19000000</color>
+
+    <color name="ic_launcher_background">#FFBB86FC</color>
+    <color name="ic_color">#FF6200EE</color>
+
+    <!--Material Buttons custom colors-->
+    <color name="snackBarBgColor">#4D4D4D</color>
+    <color name="primaryMdBtnLightGreen">#1965BD00</color>
+    <color name="primaryMdBtnDark">#de000000</color>
+    <color name="primaryMdBtnTint">#e6ffffff</color>
+    <color name="primaryMdBtnRipple">#4D212121</color>
+    <color name="primaryMdBtnDarkerTint">#deffffff</color>
+    <color name="primaryMdBtnDarkBgDisabled">#61000000</color>
+    <color name="secondaryMdBtnTint">#4cffffff</color>
+</resources>

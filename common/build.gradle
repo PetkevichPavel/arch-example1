@@ -1,0 +1,74 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'kotlin-android'
+    id 'androidx.navigation.safeargs.kotlin'
+}
+apply from: "$rootDir/gradle/common-android-library.gradle"
+
+def ext = rootProject.ext
+
+android {
+    defaultConfig {
+        buildConfigField 'String', "APP_NAME", "\"${ext.appName}\""
+    }
+}
+
+dependencies {
+    api project(':api')
+    api project(':models')
+    api project(':assets')
+
+    api supportDependencies.playCore
+
+    api supportDependencies.jodaTime
+    api supportDependencies.jkwThreeten
+    api supportDependencies.androidxLegacy
+    api supportDependencies.constraintlayout
+    api supportDependencies.androidxAnnotation
+
+    api networkDependencies.squareupOkHttp
+    api networkDependencies.squareupOkHttpLog
+    api retrofitDependencies.squareupRetrofit2
+
+    api coroutines.core
+    api coroutines.base
+
+    api koinDependencies.core
+    api koinDependencies.coreCompat
+    api koinDependencies.workmanager
+    api koinDependencies.navigation
+
+    api jetpack.coreKTX
+    api jetpack.appcompat
+    api jetpack.encryptedSharedPref
+    api jetpack.navigationUI
+    api jetpack.navigationFragment
+    api jetpack.navigationRuntimeKtx
+    api jetpack.lifecycleViewmodelKTX
+    api jetpack.lifecycleLiveData
+    kapt jetpack.lifecycleCompiler
+    api jetpack.workManagerKtx
+    androidTestImplementation jetpack.workManagerTest
+
+    api moshiDependencies.base
+    api moshiDependencies.adapters
+    api moshiDependencies.kotlin
+    api moshiDependencies.converter
+    kapt moshiDependencies.codgen
+
+    api material.material
+    api material.core
+    api material.bottomsheets
+
+    api gpsDependencies.maps
+    api gpsDependencies.location
+
+    api glideDependencies.base
+    kapt glideDependencies.compiler
+
+    api timberDependencies.timber
+
+    api helpLibs.lottie
+}

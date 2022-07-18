@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MaterialPrimaryButtonWhite" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="rippleColor">@color/primaryMdBtnRipple</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="backgroundTint">@color/primaryMdBtnTint</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:minHeight">@dimen/md_max_button_height</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceButton</item>
+    </style>
+
+    <style name="MaterialPrimaryButtonWhiteRound" parent="MaterialPrimaryButtonWhite">
+        <item name="cornerRadius">@dimen/md_fld_btn_corners_round</item>
+    </style>
+
+    <style name="MaterialPrimaryButtonBlack" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="cornerRadius">@dimen/md_fld_btn_corners_round</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:minHeight">@dimen/md_button_height</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceButton</item>
+    </style>
+
+    <style name="MaterialSecondaryButton" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="backgroundTint">@color/secondaryMdBtnTint</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="cornerRadius">@dimen/md_fld_btn_corners_round</item>
+        <item name="android:minHeight">@dimen/md_button_height</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceButton</item>
+    </style>
+
+    <style name="MaterialSecondaryBottomRound" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:backgroundTint">#f2f2f2</item>
+        <item name="android:background">@drawable/base_bottom_corners_round</item>
+        <item name="android:elevation">@dimen/cardview_default_elevation</item>
+        <item name="android:minHeight">@dimen/md_button_height</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceButton</item>
+    </style>
+
+    <style name="MaterialSecondaryUpRound" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:backgroundTint">@color/black</item>
+        <item name="android:background">@drawable/base_top_corners_round</item>
+        <item name="android:elevation">@dimen/cardview_default_elevation</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceButton</item>
+    </style>
+
+    <style name="BaseCheckBoxStyle">
+        <item name="buttonTint">@color/colorAccent</item>
+    </style>
+
+    <style name="BaseButton">
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:minHeight">@dimen/md_button_height</item>
+        <item name="android:letterSpacing">@dimen/letter_space_09</item>
+        <item name="android:lineSpacingExtra">@dimen/letter_space_extra_2</item>
+    </style>
+
+    <style name="BaseOutlineButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="cornerRadius">@dimen/md_fld_btn_corners_round</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="strokeColor">@color/black</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:minHeight">@dimen/md_button_height</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">@dimen/letter_space_09</item>
+        <item name="android:lineSpacingExtra">@dimen/letter_space_extra_2</item>
+    </style>
+
+    <style name="BaseTextButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:minHeight">@dimen/md_button_height</item>
+        <item name="android:letterSpacing">@dimen/letter_space_09</item>
+        <item name="android:lineSpacingExtra">@dimen/letter_space_extra_2</item>
+    </style>
+
+    <style name="BaseTextButton.NoCaps" parent="BaseTextButton">
+        <item name="android:letterSpacing">@dimen/letter_space_01</item>
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:lineSpacingExtra">@dimen/letter_space_extra_10</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+</resources>

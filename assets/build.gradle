@@ -1,0 +1,8 @@
+apply from: "$rootDir/gradle/common-android-library.gradle"
+
+dependencies {
+    implementation jetpack.appcompat
+    implementation jetpack.coreKTX
+    implementation material.material
+    api supportDependencies.splashScreen
+}

@@ -1,0 +1,186 @@
+ext.versions = [
+        "androidxLegacy"                  : "1.0.0",
+        "koinVersion"                     : "3.2.0",
+        "constraintlayoutVersion"         : "2.1.4",
+        "coreKTXVersion"                  : "1.8.0",
+        "appcompatVersion"                : "1.4.2",
+        "coroutinesVersion"               : "1.6.2",
+        "androidXAnnotationsVersion"      : "1.3.0",
+        "navigationVersion"               : "2.4.2",
+        "anagogVersion"                   : "4.13.1",
+        "gmapsVersion"                    : "18.0.2",
+        "gpsLocationVersion"              : "20.0.0",
+        "moshiVersion"                    : "1.13.0",
+        "moshiConverter"                  : "2.9.0",
+        "ankoVersion"                     : "0.10.8",
+        "timberVersion"                   : "5.0.1",
+        "firebaseBomVersion"              : "30.1.0",
+        "materialDialogsVersion"          : "3.3.0",
+        "archLifecycleVersion"            : "2.4.1",
+        "junitVersion"                    : "4.13.2",
+        "androidxTestCoreVersion"         : "1.2.0",
+        "extJunitCoreVersion"             : "1.1.3",
+        "mockitoCoreVersion"              : "3.3.0",
+        "espressoCoreVersion"             : "3.4.0",
+        "retrofit2Version"                : "2.9.0",
+        "jakewhartonRet2Version"          : "0.4.0",
+        "retrofitCoroutinesAdapterVersion": "0.9.2",
+        "conscryptVersion"                : "2.5.2",
+        "squareupOkHttpVersion"           : "4.9.3",
+        "squareupOkHttpLogVersion"        : "4.9.3",
+        "jkwThreetenVersion"              : "1.3.1",
+        "leakcanaryVersion"               : "2.9.1",
+        "materialVesion"                  : "1.6.1",
+        "glideVersion"                    : "4.13.2",
+        "encryptedSharedPrefVersion"      : "1.0.0",
+        "squareOkioVersion"               : "2.4.3",
+        "jodaTimeVersion"                 : "2.10.14",
+        "hdodenhofVersion"                : "3.1.0",
+        "epoxyVersion"                    : "4.6.4",
+        "cameraXmainVersion"              : "1.0.2",
+        "cameraXlifecycleVersion"         : "1.0.2",
+        "cameraXviewVersion"              : "1.0.0-alpha31",
+        "circleIndicatorVersion"          : "2.1.6",
+        "workManagerVersion"              : "2.7.1",
+        "guavaVersion"                    : "28.2-android",
+        "playCoreVersion"                 : "1.8.1",
+        "tickerViewVersion"               : "2.0.4",
+        "facebookSdkVersion"              : "14.0.0",
+        "lottieVersion"                   : "5.2.0",
+        "splashScreenVersion"             : "1.0.0-alpha01",
+]
+
+ext.supportDependencies = [
+        "playCore"          : "com.google.android.play:core-ktx:$versions.playCoreVersion",
+        "androidxLegacy"    : "androidx.legacy:legacy-support-v4:$versions.androidxLegacy",
+        "constraintlayout"  : "androidx.constraintlayout:constraintlayout:$versions.constraintlayoutVersion",
+        "androidxAnnotation": "androidx.annotation:annotation:$versions.androidXAnnotationsVersion",
+        "jkwThreeten"       : "com.jakewharton.threetenabp:threetenabp:$versions.jkwThreetenVersion",
+        "jodaTime"          : "joda-time:joda-time:$versions.jodaTimeVersion",
+        "guava"             : "com.google.guava:guava:$versions.guavaVersion",
+        "splashScreen"      : "androidx.core:core-splashscreen:$versions.splashScreenVersion"
+]
+
+ext.helpLibs = [
+        "circleImageView" : "de.hdodenhof:circleimageview:$versions.hdodenhofVersion",
+        "circleindicator2": "me.relex:circleindicator:$versions.circleIndicatorVersion",
+        "tickerView"      : "com.robinhood.ticker:ticker:$versions.tickerViewVersion",
+        "lottie"          : "com.airbnb.android:lottie:$versions.lottieVersion"
+]
+
+ext.glideDependencies = [
+        "base"    : "com.github.bumptech.glide:glide:$versions.glideVersion",
+        "compiler": "com.github.bumptech.glide:compiler:$versions.glideVersion"
+]
+
+ext.square = [
+        "okio": "com.squareup.okio:okio:$versions.squareOkioVersion"
+]
+
+ext.retrofitDependencies = [
+        "squareupRetrofit2": "com.squareup.retrofit2:retrofit:$versions.retrofit2Version"
+]
+
+ext.networkDependencies = [
+        "squareupOkHttp"   : "com.squareup.okhttp3:okhttp:$versions.squareupOkHttpVersion",
+        "squareupOkHttpLog": "com.squareup.okhttp3:logging-interceptor:$versions.squareupOkHttpLogVersion",
+        "squareupOkHttpLog": "com.squareup.okhttp3:logging-interceptor:$versions.squareupOkHttpLogVersion",
+        /**
+         * Unfortunately but we are forcing to use this Dependency because
+         * of the spam warning log: Missing class: org.conscrypt.ConscryptHostnameVerifier.
+         * More about that you will find here: @url https://github.com/square/okhttp/issues/5760.
+         */
+        "conscrypt"        : "org.conscrypt:conscrypt-android:$versions.conscryptVersion"
+]
+
+ext.moshiDependencies = [
+        'base'     : "com.squareup.moshi:moshi:$versions.moshiVersion",
+        'adapters' : "com.squareup.moshi:moshi-adapters:$versions.moshiVersion",
+        'kotlin'   : "com.squareup.moshi:moshi-kotlin:$versions.moshiVersion",
+        "converter": "com.squareup.retrofit2:converter-moshi:$versions.moshiConverter",
+        "codgen"   : "com.squareup.moshi:moshi-kotlin-codegen:$versions.moshiVersion"
+]
+
+ext.koinDependencies = [
+        "core"       : "io.insert-koin:koin-android:$versions.koinVersion",
+        "coreCompat" : "io.insert-koin:koin-android-compat:$versions.koinVersion",
+        "workmanager": "io.insert-koin:koin-androidx-workmanager:$versions.koinVersion",
+        "navigation" : "io.insert-koin:koin-androidx-navigation:$versions.koinVersion"
+]
+
+ext.epoxy = [
+        "databinding": "com.airbnb.android:epoxy-databinding:$versions.epoxyVersion",
+        "base"       : "com.airbnb.android:epoxy:$versions.epoxyVersion",
+        "processor"  : "com.airbnb.android:epoxy-processor:$versions.epoxyVersion"
+]
+
+ext.coroutines = [
+        "core"        : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$versions.coroutinesVersion",
+        "base"        : "org.jetbrains.kotlinx:kotlinx-coroutines-android:$versions.coroutinesVersion",
+        "playServices": "org.jetbrains.kotlinx:kotlinx-coroutines-play-services:$versions.coroutinesVersion"
+]
+
+ext.gpsDependencies = [
+        "maps"    : "com.google.android.gms:play-services-maps:$versions.gmapsVersion",
+        "location": "com.google.android.gms:play-services-location:$versions.gpsLocationVersion"
+]
+
+ext.material = [
+        "material"    : "com.google.android.material:material:$versions.materialVesion",
+        "core"        : "com.afollestad.material-dialogs:core:$versions.materialDialogsVersion",
+        "bottomsheets": "com.afollestad.material-dialogs:bottomsheets:$versions.materialDialogsVersion"
+]
+
+ext.ankoDependencies = [
+        "anko"          : "org.jetbrains.anko:anko-sdk15:$versions.ankoVersion",
+        "ankoCoroutines": "org.jetbrains.anko:anko-sdk21-coroutines:$versions.ankoVersion",
+        "design"        : "org.jetbrains.anko:anko-design:$versions.ankoVersion",
+        "sqlLite"       : "org.jetbrains.anko:anko-sqlite:$versions.ankoVersion"
+]
+
+ext.jetpack = [
+        "navigationFragment"   : "androidx.navigation:navigation-fragment-ktx:$versions.navigationVersion",
+        "navigationUI"         : "androidx.navigation:navigation-ui-ktx:$versions.navigationVersion",
+        "navigationRuntimeKtx" : "androidx.navigation:navigation-runtime-ktx:$versions.navigationVersion",
+        "appcompat"            : "androidx.appcompat:appcompat:$versions.appcompatVersion",
+        "coreKTX"              : "androidx.core:core-ktx:$versions.coreKTXVersion",
+        "lifecycleViewmodelKTX": "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.archLifecycleVersion",
+        "lifecycleCompiler"    : "androidx.lifecycle:lifecycle-compiler:$versions.archLifecycleVersion",
+        "lifecycleLiveData"    : "androidx.lifecycle:lifecycle-livedata-ktx:$versions.archLifecycleVersion",
+        "encryptedSharedPref"  : "androidx.security:security-crypto:$versions.encryptedSharedPrefVersion",
+        "workManagerKtx"       : "androidx.work:work-runtime-ktx:$versions.workManagerVersion",
+        "workManagerTest"      : "androidx.work:work-testing:$versions.workManagerVersion"
+]
+
+ext.firebase = [
+        "bom"         : "com.google.firebase:firebase-bom:$versions.firebaseBomVersion",
+        "analytics"   : "com.google.firebase:firebase-analytics",
+        "dynamicLinks": "com.google.firebase:firebase-dynamic-links-ktx",
+        "firestore"   : "com.google.firebase:firebase-firestore",
+        "configKtx"   : "com.google.firebase:firebase-config-ktx",
+        "iam"         : "com.google.firebase:firebase-inappmessaging-display",
+        "fcm"         : "com.google.firebase:firebase-messaging",
+        "crashlytics" : "com.google.firebase:firebase-crashlytics"
+]
+
+ext.timberDependencies = [
+        "timber": "com.jakewharton.timber:timber:$versions.timberVersion"
+]
+
+ext.facebook = [
+        "sdk": "com.facebook.android:facebook-android-sdk:${versions.facebookSdkVersion}"
+]
+
+ext.testDependencies = [
+        "junit"         : "junit:junit:$versions.junitVersion",
+        "extJunit"      : "androidx.test.ext:junit:$versions.extJunitCoreVersion",
+        "mockitoCore"   : "org.mockito:mockito-core:$versions.mockitoCoreVersion",
+        "axEspressoCore": "androidx.test.espresso:espresso-core:$versions.espressoCoreVersion",
+        "leakcanary"    : "com.squareup.leakcanary:leakcanary-android:$versions.leakcanaryVersion"
+]
+
+ext.cameraX = [
+        "main"     : "androidx.camera:camera-camera2:$versions.cameraXmainVersion",
+        "lifecycle": "androidx.camera:camera-lifecycle:$versions.cameraXlifecycleVersion",
+        "view"     : "androidx.camera:camera-view:$versions.cameraXviewVersion"
+]

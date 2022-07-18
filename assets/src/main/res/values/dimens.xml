@@ -1,0 +1,82 @@
+<resources>
+
+    <dimen name="corner_radius_16">16dp</dimen>
+    <dimen name="corner_radius_8">8dp</dimen>
+    <dimen name="corner_radius_4">4dp</dimen>
+
+    <dimen name="height_156">156dp</dimen>
+    <dimen name="height_100">100dp</dimen>
+    <dimen name="height_90">90dp</dimen>
+    <dimen name="height_56">56dp</dimen>
+
+    <dimen name="content_350">350dp</dimen>
+    <dimen name="content_200">200dp</dimen>
+    <dimen name="content_160">160dp</dimen>
+    <dimen name="content_110">110dp</dimen>
+    <dimen name="content_82">82dp</dimen>
+    <dimen name="content_72">72dp</dimen>
+    <dimen name="content_60">60dp</dimen>
+    <dimen name="content_56">56dp</dimen>
+    <dimen name="content_52">52dp</dimen>
+    <dimen name="content_48">48dp</dimen>
+    <dimen name="content_44">44dp</dimen>
+    <dimen name="content_40">40dp</dimen>
+    <dimen name="content_36">36dp</dimen>
+    <dimen name="content_32">32dp</dimen>
+    <dimen name="content_30">30dp</dimen>
+    <dimen name="content_28">28dp</dimen>
+    <dimen name="content_18">18dp</dimen>
+    <dimen name="content_24">24dp</dimen>
+    <dimen name="content_20">20dp</dimen>
+    <dimen name="content_16">16dp</dimen>
+    <dimen name="content_15">15dp</dimen>
+    <dimen name="content_14">14dp</dimen>
+    <dimen name="content_12">12dp</dimen>
+    <dimen name="content_10">10dp</dimen>
+    <dimen name="content_8">8dp</dimen>
+    <dimen name="content_6">6dp</dimen>
+    <dimen name="content_4">4dp</dimen>
+    <dimen name="content_2">2dp</dimen>
+    <dimen name="content_0">0dp</dimen>
+
+
+    <dimen name="letter_space_01">0.01</dimen>
+    <dimen name="letter_space_02">0.02</dimen>
+    <dimen name="letter_space_03">0.03</dimen>
+    <dimen name="letter_space_09">0.09</dimen>
+
+    <dimen name="letter_space_extra_2">2sp</dimen>
+    <dimen name="letter_space_extra_4">4sp</dimen>
+    <dimen name="letter_space_extra_6">6sp</dimen>
+    <dimen name="letter_space_extra_8">8sp</dimen>
+    <dimen name="letter_space_extra_10">10sp</dimen>
+    <dimen name="letter_space_extra_12">12sp</dimen>
+
+    <dimen name="text_huge">26sp</dimen>
+    <dimen name="text_size_10">10sp</dimen>
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="text_size_13">13sp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_15">15sp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="text_size_17">17sp</dimen>
+    <dimen name="text_size_18">18sp</dimen>
+    <dimen name="text_size_20">20sp</dimen>
+    <dimen name="text_size_22">22sp</dimen>
+    <dimen name="text_size_24">24sp</dimen>
+    <dimen name="text_size_26">26sp</dimen>
+    <dimen name="text_size_28">28sp</dimen>
+    <dimen name="text_size_30">30sp</dimen>
+    <dimen name="text_size_32">32sp</dimen>
+    <dimen name="text_size_34">34sp</dimen>
+
+    <dimen name="md_corners_round">20dp</dimen>
+    <dimen name="md_fld_btn_corners_round">10dp</dimen>
+    <dimen name="md_snack_corners_round">6dp</dimen>
+    <dimen name="md_button_height">56dp</dimen>
+    <dimen name="md_max_button_height">56dp</dimen>
+
+    <dimen name="map_fab_menu_spacing">60dp</dimen>
+
+    <dimen name="bottom_sheet_image_horizontal_margin">-1dp</dimen>
+</resources>

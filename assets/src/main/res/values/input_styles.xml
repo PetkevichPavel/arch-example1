@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="OutlinedInputBoxRound" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusBottomEnd">@dimen/md_fld_btn_corners_round</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/md_fld_btn_corners_round</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/md_fld_btn_corners_round</item>
+        <item name="boxCornerRadiusTopStart">@dimen/md_fld_btn_corners_round</item>
+        <item name="hintTextAppearance">@style/TextAppearance.App.TextInputLayout</item>
+        <item name="boxStrokeColor">@color/colorAccent</item>
+    </style>
+
+</resources>

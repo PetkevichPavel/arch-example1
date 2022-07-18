@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="general_empty"></string>
+  <string name="general_add">Přidat</string>
+  <string name="general_all_notification_channel">arch</string>
+  <string name="general_allow">Povolit</string>
+  <string name="general_and">a</string>
+  <string name="general_cancel">Zrušit</string>
+  <string name="general_close">Zavřít</string>
+  <string name="general_continue">Pokračovat</string>
+  <string name="general_done">Hotovo</string>
+  <string name="general_email_chooser_title">Zvolte aplikaci:</string>
+  <string name="general_error">Something went wrong!</string>
+  <string name="general_error_server_maintenance">Omlouváme se, právě probíhá údržba služby arch.</string>
+  <string name="general_go">Jdu na to!</string>
+  <string name="general_go_back">Jít zpět</string>
+  <string name="general_how_to">Jak jezdit</string>
+  <string name="general_image_picker_image_selection_message">Jakým způsobem chcete fotku nahrát?</string>
+  <string name="general_loading">Načítání...</string>
+  <string name="general_more_info">Více info</string>
+  <string name="general_next">Další</string>
+  <string name="general_no_connection">Žádné připojení k internetu</string>
+  <string name="general_ok">Ok</string>
+  <string name="general_photo_chooser_title">Vyberte fotku</string>
+  <string name="general_repeat">Opakovat</string>
+  <string name="general_report">Nahlásit</string>
+  <string name="general_restart">Restartovat</string>
+  <string name="general_save">Uložit</string>
+  <string name="general_send">Odeslat</string>
+  <string name="general_settings">Nastavení </string>
+  <string name="general_skip">Přeskočit</string>
+  <string name="general_try_again">Zkusit znovu</string>
+  <string name="general_understood">Rozumím</string>
+  <string name="general_upload">Nahrát</string>
+  <string name="general_yes">Ano</string>
+</resources>

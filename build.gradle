@@ -1,0 +1,67 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext.kotlin_version = '1.7.0'
+
+    repositories {
+        mavenCentral()
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+
+    dependencies {
+        classpath 'com.android.tools:r8:3.3.28'
+        classpath 'com.android.tools.build:gradle:7.2.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'io.fabric.tools:gradle:1.31.2'
+        def nav_version = '2.4.1'
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+plugins {
+    id 'com.android.application' version '7.2.0' apply false
+    id 'com.android.library' version '7.2.1' apply false
+    id 'org.jetbrains.kotlin.android' version '1.6.21' apply false
+    id "com.starter.easylauncher" version "5.1.1" apply false
+}
+
+ext {
+    appName = "Flickr"
+    allChannelId = "channel_all_id"
+    props = loadProps(file("$rootDir/properties/secrets.properties"))
+
+    compileSdkVersion = 31
+    buildToolsVersion = "31.0.0"
+
+    minSdkVersion = 24
+    targetSdkVersion = 31
+
+    versProps = new Properties()
+    versProps.load(file("$rootDir/version.properties").newReader())
+
+    versionCode = versProps['version_code'].toBigInteger()
+    versionName = versProps['version_name']
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+static def loadProps(path) {
+    def props = new Properties()
+    if (path.exists()) {
+        props.load(path.newReader())
+    } else {
+        def baseApiUrl = System.getenv("BASE_API_URL") ?: ""
+
+        props.put("baseApiUrl.dev", baseApiUrl)
+        props.put("baseApiUrl.staging", baseApiUrl)
+        props.put("baseApiUrl.production", baseApiUrl)
+    }
+    return props
+}
+
+apply from: './gradle/ks-props.gradle'

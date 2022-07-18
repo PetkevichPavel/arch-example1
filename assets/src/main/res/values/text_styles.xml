@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextRegular" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="TextRegular.TextPrimary">
+        <item name="android:textColor">@color/text_dark</item>
+    </style>
+
+    <style name="TextRegular.TextPrimary.12">
+        <item name="android:textSize">@dimen/text_size_12</item>
+    </style>
+
+    <style name="TextRegular.TextPrimary.13">
+        <item name="android:textSize">@dimen/text_size_13</item>
+    </style>
+
+    <style name="TextRegular.TextPrimary.15">
+        <item name="android:textSize">@dimen/text_size_15</item>
+    </style>
+
+    <style name="TextRegular.TextPrimary.16">
+        <item name="android:textSize">@dimen/text_size_16</item>
+    </style>
+
+    <style name="TextRegular.TextPrimary.17">
+        <item name="android:textSize">@dimen/text_size_17</item>
+    </style>
+
+    <style name="TextRegular.TextSecondary">
+        <item name="android:textColor">@color/text_dark</item>
+    </style>
+
+    <style name="TextRegular.TextSecondary.12">
+        <item name="android:textSize">@dimen/text_size_12</item>
+    </style>
+
+    <style name="TextRegular.TextSecondary.13">
+        <item name="android:textSize">@dimen/text_size_13</item>
+    </style>
+
+    <style name="TextRegular.TextSecondary.15">
+        <item name="android:textSize">@dimen/text_size_15</item>
+    </style>
+
+    <style name="TextRegular.TextSecondary.17">
+        <item name="android:textSize">@dimen/text_size_17</item>
+    </style>
+
+    <style name="TextRegular.Black">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="TextRegular.Black.12">
+        <item name="android:textSize">@dimen/text_size_12</item>
+    </style>
+
+    <style name="TextRegular.Black.13">
+        <item name="android:textSize">@dimen/text_size_13</item>
+    </style>
+
+    <style name="TextRegular.Black.14">
+        <item name="android:textSize">@dimen/text_size_14</item>
+    </style>
+
+    <style name="TextRegular.Black.15">
+        <item name="android:textSize">@dimen/text_size_15</item>
+    </style>
+
+    <style name="TextRegular.Black.16">
+        <item name="android:textSize">@dimen/text_size_16</item>
+    </style>
+
+    <style name="TextRegular.Black.17">
+        <item name="android:textSize">@dimen/text_size_17</item>
+    </style>
+
+    <style name="TextRegular.Black.18">
+        <item name="android:textSize">@dimen/text_size_18</item>
+    </style>
+
+    <style name="TextRegular.Black.20">
+        <item name="android:textSize">@dimen/text_size_20</item>
+    </style>
+
+    <style name="TextBold" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">@dimen/letter_space_01</item>
+    </style>
+
+    <style name="TextBold.TextPrimary">
+        <item name="android:textColor">@color/text_dark</item>
+    </style>
+
+    <style name="TextBold.TextPrimary.15">
+        <item name="android:textSize">@dimen/text_size_15</item>
+    </style>
+
+    <style name="TextBold.TextPrimary.18">
+        <item name="android:textSize">@dimen/text_size_18</item>
+    </style>
+
+    <style name="TextBold.TextPrimary.28">
+        <item name="android:textSize">@dimen/text_size_28</item>
+    </style>
+
+    <style name="TextBold.TextSecondary">
+        <item name="android:textColor">@color/text_dark</item>
+    </style>
+
+    <style name="TextBold.TextSecondary.15">
+        <item name="android:textSize">@dimen/text_size_15</item>
+    </style>
+
+    <style name="TextBold.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextBold.Black.14">
+        <item name="android:textSize">@dimen/text_size_14</item>
+    </style>
+
+    <style name="TextBold.Black.15">
+        <item name="android:textSize">@dimen/text_size_15</item>
+    </style>
+
+    <style name="TextBold.Black.16">
+        <item name="android:textSize">@dimen/text_size_16</item>
+    </style>
+
+    <style name="TextBold.Black.17">
+        <item name="android:textSize">@dimen/text_size_17</item>
+    </style>
+
+    <style name="TextBold.Black.20">
+        <item name="android:textSize">@dimen/text_size_20</item>
+    </style>
+
+    <style name="TextBold.Black.18">
+        <item name="android:textSize">@dimen/text_size_18</item>
+    </style>
+
+    <style name="TextBold.Black.26">
+        <item name="android:textSize">@dimen/text_size_26</item>
+    </style>
+
+    <style name="TextBold.Black.28">
+        <item name="android:textSize">@dimen/text_size_28</item>
+    </style>
+
+    <style name="TextBold.Black.30">
+        <item name="android:textSize">@dimen/text_size_30</item>
+    </style>
+
+    <style name="TextBold.Black.32">
+        <item name="android:textSize">@dimen/text_size_32</item>
+    </style>
+
+</resources>

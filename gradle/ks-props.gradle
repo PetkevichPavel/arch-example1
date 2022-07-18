@@ -1,0 +1,12 @@
+ext.loadKeystoreProps = { path ->
+    Properties props = new Properties()
+    if (path.exists()) {
+        props.load(new FileInputStream(file(path)))
+    } else {
+        props.put("signing.storeFile", System.getenv("STORE_FILE") ?: "")
+        props.put("signing.alias", System.getenv("KEY_ALIAS"))
+        props.put("signing.keyPassword", System.getenv("KEY_PASSWORD"))
+        props.put("signing.storePassword", System.getenv("STORE_PASSWORD"))
+    }
+    return props
+}

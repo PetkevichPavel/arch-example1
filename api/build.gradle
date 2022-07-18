@@ -1,0 +1,12 @@
+apply from: "$rootDir/gradle/common-android-library.gradle"
+
+dependencies {
+    implementation project(':models')
+
+    implementation jetpack.coreKTX
+    implementation jetpack.appcompat
+
+    implementation coroutines.core
+
+    implementation retrofitDependencies.squareupRetrofit2
+}

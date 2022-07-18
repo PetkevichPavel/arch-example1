@@ -1,0 +1,152 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id "androidx.navigation.safeargs.kotlin"
+    id 'com.starter.easylauncher'
+}
+
+apply from: '../gradle/dependencies.gradle'
+
+def ext = rootProject.ext
+
+android {
+    compileSdkVersion ext.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.arch.app"
+        minSdkVersion ext.minSdkVersion
+        targetSdkVersion ext.targetSdkVersion
+        versionCode ext.versionCode
+        versionName ext.versionName
+
+        buildConfigField 'String', "APP_NAME", "\"${ext.appName}\""
+        buildConfigField 'String', 'CHANNEL_ALL_ID', "\"${ext.allChannelId}\""
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        ndk.abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+
+        multiDexEnabled true
+    }
+
+    buildFeatures {
+        dataBinding = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_11
+    }
+
+    signingConfigs {
+        debug {
+            def ksProps = loadKeystoreProps(file("$rootDir/properties/ks_debug.properties"))
+            storeFile file(ksProps["signing.storeFile"])
+            storePassword ksProps['signing.storePassword']
+            keyAlias ksProps["signing.alias"]
+            keyPassword ksProps["signing.keyPassword"]
+        }
+
+        release {
+            def ksProps = loadKeystoreProps(file("$rootDir/properties/ks_release.properties"))
+            storeFile file(ksProps["signing.storeFile"])
+            storePassword ksProps['signing.storePassword']
+            keyAlias ksProps["signing.alias"]
+            keyPassword ksProps["signing.keyPassword"]
+        }
+    }
+    packagingOptions {
+        resources {
+            excludes += ['META-INF/DEPENDENCIES', 'META-INF/LICENSE', 'META-INF/LICENSE.txt', 'META-INF/license.txt', 'META-INF/NOTICE', 'META-INF/NOTICE.txt', 'META-INF/notice.txt', 'META-INF/ASL2.0', 'META-INF/*.kotlin_module']
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            debuggable false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions "api"
+    productFlavors {
+        dev {
+            applicationIdSuffix ".dev"
+            dimension "api"
+            signingConfig signingConfigs.debug
+            manifestPlaceholders = [
+                    appName: ext.appName + " D"
+            ]
+            buildConfigField 'String', 'BASE_API_URL', "\"${ext.props['baseApiUrl.dev']}\""
+        }
+
+        staging {
+            applicationIdSuffix ".staging"
+            dimension "api"
+            signingConfig signingConfigs.debug
+            manifestPlaceholders = [
+                    appName: ext.appName + " S"
+            ]
+            buildConfigField 'String', 'BASE_API_URL', "\"${ext.props['baseApiUrl.staging']}\""
+        }
+
+        production {
+            dimension "api"
+            signingConfig signingConfigs.release
+            buildConfigField 'String', 'BASE_API_URL', "\"${ext.props['baseApiUrl.production']}\""
+        }
+    }
+
+}
+
+easylauncher {
+    iconNames = ["@mipmap/ic_launcher"] // Traditional launcher icon
+    //foregroundIconNames = ["@mipmap/ic_launcher_foreground"] // Foreground of adaptive launcher icon
+    defaultFlavorNaming false
+    productFlavors {
+        dev {
+            filters = customColorRibbonFilter("DEV", "#b51500")
+        }
+        staging {
+            filters = customColorRibbonFilter("STAGE", "#f2910a")
+        }
+        production {
+            enable false
+        }
+    }
+}
+
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+
+    implementation project(':common')
+    implementation project(':stories')
+
+
+    implementation supportDependencies.guava
+
+    implementation retrofitDependencies.squareupRetrofit2
+    implementation networkDependencies.squareupOkHttpLog
+    implementation networkDependencies.conscrypt
+
+    implementation timberDependencies.timber
+
+    testImplementation testDependencies.junit
+    androidTestImplementation testDependencies.extJunit
+    androidTestImplementation testDependencies.axEspressoCore
+    debugImplementation testDependencies.leakcanary
+}
