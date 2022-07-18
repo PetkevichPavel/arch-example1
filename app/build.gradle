@@ -104,6 +104,9 @@ android {
         production {
             dimension "api"
             signingConfig signingConfigs.release
+            manifestPlaceholders = [
+                    appName: ext.appName
+            ]
             buildConfigField 'String', 'BASE_API_URL', "\"${ext.props['baseApiUrl.production']}\""
         }
     }
@@ -126,7 +129,6 @@ easylauncher {
         }
     }
 }
-
 
 
 dependencies {
